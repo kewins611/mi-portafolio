@@ -1,0 +1,403 @@
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 0;
+}
+
+
+
+/* Estilos del menú de navegación */
+nav {
+    background: #313748; /* Color de fondo del menú */
+    padding: 2%; /* Espaciado interno del menú */
+    border-radius: 10px; /* Bordes redondeados del menú */
+    position: sticky; /* El menú se queda pegado al borde superior cuando el usuario se desplaza */
+    top: 0; /* Posición en la parte superior */
+    z-index: 1000; /* Asegura que el menú esté encima de otros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra ligera para el menú */
+}
+
+/* Estilos de los enlaces del menú */
+nav .menus {
+    display: inline-flex;
+    background: #313748; /* Color de fondo del menú */
+    text-decoration: none; /* Sin subrayado */
+    padding: 20px 10px; /* Espaciado interno de los enlaces */
+    border-radius: 20%; /* Esquinas redondeadas */
+    color: #FFF; /* Color del texto del menú */
+    transition: background 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto hover en los enlaces del menú */
+nav .menus:hover {
+    background: #4a5d6a; /* Cambia el color de fondo cuando se pasa el ratón sobre el menú */
+    transform: scale(1.05); /* Aumenta el tamaño del menú ligeramente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añadir una sombra en hover */
+}
+
+/* Estilo para el estado activo del menú */
+nav .menus.active {
+    background: #4a5d6a; /* Color de fondo cuando está activo */
+    color: #FFF; /* Color del texto cuando está activo */
+    border-radius: 20%; /* Asegura que el fondo activo tenga bordes redondeados */
+}
+
+
+.proyectos {
+    background-color: #FFF;
+    padding: 40px 20px;
+    margin: 60px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.contenedor-2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px 20px;
+}
+
+.titulo {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.galeria {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Estilo para el contenedor de cada imagen y botón */
+.img-wrapper {
+    position: relative; /* Necesario para posicionar el botón sobre la imagen */
+    width: 280px;
+}
+
+/* Estilo de las Imágenes en la Galería */
+.imgp {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de transición */
+}
+
+/* Efecto al pasar el ratón sobre la imagen */
+.imgp:hover {
+    transform: scale(1.05); /* Aumenta la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+}
+
+/* Contenedor del botón de GitHub */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Posición absoluta para estar sobre la imagen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el botón */
+    opacity: 0; /* Oculta el botón por defecto */
+    transition: opacity 0.3s ease; /* Efecto de transición */
+}
+
+/* Estilo del botón de GitHub */
+.button-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #000; /* Fondo negro */
+    color: #FFF; /* Texto blanco */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+.button-container a:hover {
+    background: #333; /* Fondo más oscuro */
+}
+
+/* Mostrar el botón de GitHub al pasar el ratón sobre la imagen */
+.img-wrapper:hover .button-container {
+    opacity: 1;
+}
+
+/* Botón "Ver Más" */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+.sobre-mi {
+    background-color: #FFF; /* Color de fondo gris claro */
+    padding: 40px 20px;
+    margin: 60px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(58, 57, 57, 0.1); /* Sombra para un efecto de profundidad */
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000000; /* Color del texto del título */
+}
+
+.contenido {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.mi-foto {
+    border-radius: 50%; /* Hace que la foto sea circular */
+    width: 250px;
+    height: 250px;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la imagen */
+}
+
+.bio {
+    max-width: 600px;
+    text-align: center; /* Centra el texto en el contenedor de la biografía */
+}
+
+.bio h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #222; /* Color del texto del subtítulo */
+}
+
+.bio p {
+    font-size: 1rem;
+    line-height: 1.6; /* Altura de línea para una mejor legibilidad */
+    color: #555; /* Color del texto de la biografía */
+    margin-bottom: 15px;
+}
+
+.bio a {
+    color: #007bff; /* Color del enlace */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.bio a:hover {
+    text-decoration: underline; /* Subrayado en hover */
+}
+
+/* Nueva imagen adicional */
+.imagen-adicional {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.imagen-extra {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para la imagen adicional */
+}
+
+
+
+
+
+
+.iconos {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.iconos a {
+    color: #333;
+    font-size: 2rem; /* Ajusta el tamaño de los íconos */
+    text-decoration: none;
+}
+
+
+.git:hover {
+    color: #000; /* Color negro en hover */
+}
+
+.html:hover{
+    color: #f1644b;
+}
+.css:hover{
+    color: #0099ff;
+}
+.js:hover{
+    color: gold;
+}
+.java:hover{
+    color: red;
+}
+.c:hover{
+    color: blueviolet;
+}
+
+.iconos {
+    display: flex;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    flex-wrap: wrap; /* Permite que los íconos se ajusten en varias líneas si es necesario */
+}
+.bio p {
+    margin-bottom: 10px;
+}
+
+.contacto{
+    background-color: #ecebeb;
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+.contacto .contenedor-3{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contacto .titulo-2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.formulario-container{
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo{
+    display:flex;
+    flex-direction: column; 
+}
+
+.campo label{
+    margin-bottom: 5px;
+    font-weight: bold; 
+}
+
+.campo input .campo textarea{
+    padding: 10px;
+    border: 4px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.campo textarea{
+    resize: vertical;
+}
+
+button{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: #0056b3;
+}
+
+.footer{
+    background-color: #313748;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer .contenedor-4{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contacto-info, redes-sociales{
+    text-align: center;
+}
+
+.contacto-info h3, .redes-sociales h3{
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.contacto-info p{
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.contacto-info a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.contacto-info a:hover{
+    text-decoration: underline;
+}
+
+.redes-sociales a{
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1rem;
+    transition: color 0.3s ease;  
+}
+.redes-sociales a:hover{
+    color: #007bff;
+}
+
+.footer-copyright{
+    text-align: center; 
+    font-size: 0.875rem;
+    margin-top: 20px;
+}

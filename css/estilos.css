@@ -1,0 +1,45 @@
+*{
+
+}
+
+
+
+.Menu{
+    display: inline-block;
+    background: rgb(58, 130, 181);
+    color: #fff;
+    padding: 20px 10px;
+    text-decoration: none;
+}
+
+.nav-Menu:hover{
+    background: #2faa96;
+}
+
+nav{
+    background: #2faa96;
+    display: flex;
+    justify-content: center;
+
+}
+button{
+    background: #2faa96;    
+    padding: 20px;
+}
+button:hover{
+    background: #7ba54b;
+
+}
+
+@media (max-width: 600px){
+    nav{
+        background: #1835c6;
+        flex-direction: column;
+        }
+        .Menu{  
+            margin: 5px 0;
+            background: #1d99bc;
+        }
+
+
+}
